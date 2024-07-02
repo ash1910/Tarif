@@ -281,13 +281,12 @@
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
       <!-- Sidebar user panel -->
+      <div class="user-panel">
       <!-- search form -->
       <!-- /.search form -->
       <!-- sidebar menu: : style can be found in sidebar.less -->
-      <ul class="sidebar-menu" data-widget="tree">
+      <ul class="sidebar-menu" data-widget="tree">      
 
-          
-        <li class="header">LABELS</li>
         <!--<li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
         <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>-->
         <li><a href="/searchtariff"><i class="fa fa-circle-o text-aqua"></i> <span>Tariff Search</span></a></li>
@@ -305,8 +304,8 @@
         Tariff Search
       </h1>
       <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="/tariffsearch">Tariff Search</a></li>
+        <li><a href="/searchtariff"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="#">Tariff Search</a></li>
         <!--<li class="active">Simple</li>-->
       </ol>
     </section>
@@ -315,10 +314,12 @@
   <!--search button-->
   <center>
   <form action="{{ route('searchtariff') }}" method="GET">
-<div class="box box-primary" style="width: 550px; height: 190px; padding-top: 50px; margin-top:40px">
-
+<div class="box box-primary" style="width: 550px; height: 230px; padding-top: 50px; margin-top:40px">
+<div class="box-header">
+              <h4 class="box-title">Search by HS Code or Description</h4>
+  </div>
                     <div class="input-group input-group-sm hidden-xs" style="width: 250px; padding-bottom: 30px;">
-                                <input style="height: 40px;" type="text" name="table_search" class="form-control pull-right" placeholder="Tariff Search">
+                             <label >HS Code/Description</label> <input style="height: 40px;" type="text" name="table_search" class="form-control pull-right" placeholder="Tariff Search">
                     </div>
                     <div class="input-group-btn">
                   <button type="submit" class="btn btn-primary">Search</button>
@@ -393,7 +394,7 @@
   <footer class="main-footer">
     <div class="pull-right hidden-xs">
     </div>
-    <strong>Copyright &copy; 2014-2019 <a href="https://technomole.com">TechnoMole Creations Ltd</a>.</strong> All rights
+    <strong>Copyright &copy; 2021-2024 <a href="https://technomole.com" target=”_blank”>TechnoMole Creations Ltd</a>.</strong> All rights
     reserved.
   </footer>
 

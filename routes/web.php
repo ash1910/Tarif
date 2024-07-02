@@ -3,10 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TariffController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
+Route::get('/',[TariffController::class, 'showsearch'])->name('searchtariff');
 
 //Route::get('tariff',[TariffController::class, 'show']);
 //Route::get('tariffsearch',[TariffController::class, 'search']);

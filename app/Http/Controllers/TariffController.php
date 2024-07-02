@@ -38,11 +38,15 @@ class TariffController extends Controller
         }
         else
         {
-        $results = Tariff::where('DESCRIPTION', 'like', "%$search%")->get();
-        return view('searchtariff', ['results' => $results]);
+            //$results = Tariff::where('DESCRIPTION', 'like', "%$search%")->get();
+            $results = Tariff::where(function($query) use ($search) {
+                $query->where('DESCRIPTION', 'like', "%$search%")
+                    ->orWhere('HSCODE', 'like', "%$search%");
+            })->get();
+            return view('searchtariff', ['results' => $results]);
 
-        //return view('searchtariff', compact('Tariff'));
-        //return view('searchtariff');
+            //return view('searchtariff', compact('Tariff'));
+            //return view('searchtariff');
         }
 
     }

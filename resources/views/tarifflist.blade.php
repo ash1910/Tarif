@@ -284,11 +284,9 @@
     <section class="sidebar">
       <!-- Sidebar user panel -->
       <div class="user-panel">
-      </form>
       <!-- /.search form -->
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
-        <li class="header">LABELS</li>
         <!--<li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
         <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>-->
         <li><a href="/searchtariff"><i class="fa fa-circle-o text-aqua"></i> <span>Tariff Search</span></a></li>
@@ -306,8 +304,8 @@
         Tariff List
       </h1>
       <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="/tarifflist">Tariff List</a></li>
+        <li><a href="/searchtariff"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="#">Tariff List</a></li>
       </ol>
     </section>
 
@@ -367,7 +365,7 @@
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
-    <strong>Copyright &copy; 2021-2024 <a href="https://technomole.com">TechnoMole Creations Ltd</a>.</strong> All rights
+    <strong>Copyright &copy; 2021-2024 <a href="https://technomole.com" target=”_blank”>TechnoMole Creations Ltd</a>.</strong> All rights
     reserved.
   </footer>
 
