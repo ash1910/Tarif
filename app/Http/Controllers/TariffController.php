@@ -20,7 +20,7 @@ class TariffController extends Controller
     public function search(Request $request)
 {
     $search = $request->input('table_search');
-    $results = Tariff::where('DESCRIPTION', 'like', "%$search%")->paginate(10);
+    $results = Tariff::where('DESCRIPTION', 'like', "%$search%")->get();
 
     return view('tarifflist', ['results' => $results]);
     //return view('tariffsearch', compact('results'));

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,6 +13,8 @@
   <link rel="stylesheet" href="../../bower_components/font-awesome/css/font-awesome.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="../../bower_components/Ionicons/css/ionicons.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="../../bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
@@ -26,13 +29,8 @@
   <![endif]-->
 
   <!-- Google Font -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-
-  <!--Data Table-->
-  <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css" />
-
-
-
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
@@ -59,7 +57,6 @@
         <ul class="nav navbar-nav">
           <!-- Messages: style can be found in dropdown.less-->
           <li class="dropdown messages-menu">
-
             <ul class="dropdown-menu">
               <li class="header">You have 4 messages</li>
               <li>
@@ -67,9 +64,6 @@
                 <ul class="menu">
                   <li><!-- start message -->
                     <a href="#">
-                      <div class="pull-left">
-                        <img src="../../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-                      </div>
                       <h4>
                         Support Team
                         <small><i class="fa fa-clock-o"></i> 5 mins</small>
@@ -80,9 +74,6 @@
                   <!-- end message -->
                   <li>
                     <a href="#">
-                      <div class="pull-left">
-                        <img src="../../dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
-                      </div>
                       <h4>
                         AdminLTE Design Team
                         <small><i class="fa fa-clock-o"></i> 2 hours</small>
@@ -133,7 +124,6 @@
           </li>
           <!-- Notifications: style can be found in dropdown.less -->
           <li class="dropdown notifications-menu">
-
             <ul class="dropdown-menu">
               <li class="header">You have 10 notifications</li>
               <li>
@@ -155,6 +145,7 @@
                       <i class="fa fa-users text-red"></i> 5 new members joined
                     </a>
                   </li>
+
                   <li>
                     <a href="#">
                       <i class="fa fa-shopping-cart text-green"></i> 25 sales made
@@ -172,7 +163,6 @@
           </li>
           <!-- Tasks: style can be found in dropdown.less -->
           <li class="dropdown tasks-menu">
-
             <ul class="dropdown-menu">
               <li class="header">You have 9 tasks</li>
               <li>
@@ -184,8 +174,9 @@
                         Design some buttons
                         <small class="pull-right">20%</small>
                       </h3>
-                      <div class="progress progress-xs">
-                        <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                      <div class="progress xs">
+                        <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar"
+                             aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
                           <span class="sr-only">20% Complete</span>
                         </div>
                       </div>
@@ -198,8 +189,9 @@
                         Create a nice theme
                         <small class="pull-right">40%</small>
                       </h3>
-                      <div class="progress progress-xs">
-                        <div class="progress-bar progress-bar-green" style="width: 40%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                      <div class="progress xs">
+                        <div class="progress-bar progress-bar-green" style="width: 40%" role="progressbar"
+                             aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
                           <span class="sr-only">40% Complete</span>
                         </div>
                       </div>
@@ -212,8 +204,9 @@
                         Some task I need to do
                         <small class="pull-right">60%</small>
                       </h3>
-                      <div class="progress progress-xs">
-                        <div class="progress-bar progress-bar-red" style="width: 60%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                      <div class="progress xs">
+                        <div class="progress-bar progress-bar-red" style="width: 60%" role="progressbar"
+                             aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
                           <span class="sr-only">60% Complete</span>
                         </div>
                       </div>
@@ -226,8 +219,9 @@
                         Make beautiful transitions
                         <small class="pull-right">80%</small>
                       </h3>
-                      <div class="progress progress-xs">
-                        <div class="progress-bar progress-bar-yellow" style="width: 80%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                      <div class="progress xs">
+                        <div class="progress-bar progress-bar-yellow" style="width: 80%" role="progressbar"
+                             aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
                           <span class="sr-only">80% Complete</span>
                         </div>
                       </div>
@@ -241,9 +235,8 @@
               </li>
             </ul>
           </li>
-         <!-- <!-- User Account: style can be found in dropdown.less -->
+          <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
-
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
@@ -253,7 +246,7 @@
                   Alexander Pierce - Web Developer
                   <small>Member since Nov. 2012</small>
                 </p>
-              </li>-->
+              </li>
               <!-- Menu Body -->
               <li class="user-body">
                 <div class="row">
@@ -281,7 +274,6 @@
             </ul>
           </li>
           <!-- Control Sidebar Toggle Button -->
-
         </ul>
       </div>
     </nav>
@@ -290,16 +282,18 @@
   <aside class="main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
-
+      <!-- Sidebar user panel -->
+      <div class="user-panel">
+      </form>
+      <!-- /.search form -->
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
-        
         <li class="header">LABELS</li>
-        <!--<li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>-->
-        <!--<li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>-->
+        <!--<li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
+        <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>-->
         <li><a href="/searchtariff"><i class="fa fa-circle-o text-aqua"></i> <span>Tariff Search</span></a></li>
-        <li><a href="/tarifflist"><i class="fa fa-circle-o text-aqua"></i> <span>Tariff List</span></a></li>
-      </ul>
+        <li><a href="/tarifflist"><i class="fa fa-circle-o text-aqua"></i> <span>Tariff List</span></a></li>  
+    </ul>
     </section>
     <!-- /.sidebar -->
   </aside>
@@ -318,29 +312,17 @@
     </section>
 
     <!-- Main content -->
-    <section class="content" style="padding-left: 100px; padding-right: 100px">
-      <!-- /.row -->
+    <section class="content">
       <div class="row">
         <div class="col-xs-12">
+
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title">Tariff List</h3>
-              <div class="box-tools">
-              <form action="{{ route('tarifflist') }}" method="GET">
-                <div class="input-group input-group-sm hidden-xs" style="width: 150px;">
-                  <input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
-
-                  <div class="input-group-btn">
-                    <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
-                  </div>
-                </div>
-                </form>
-              </div>
+              <!--<h3 class="box-title">Data Table With Full Features</h3>-->
             </div>
             <!-- /.box-header -->
-
-            <div class="box-body table-responsive no-padding">
-              <table id="myTable" class="table table-hover">
+            <div class="box-body">
+              <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
                   <th>HSCODE</th>
@@ -354,10 +336,9 @@
                   <th>EXD</th>
                   <th>TTI</th>
                </tr>
-             </thead>
-            @if (count($results) > 0)
-                @foreach ($results as $result)
+                </thead>
                 <tbody>
+                @foreach ($results as $result)
                 <tr>
                   <td>{{ $result->HSCODE }}</td>
                   <td>{{ $result->DESCRIPTION }}</td>
@@ -370,40 +351,17 @@
                   <td>{{ $result->EXD }}</td>
                   <td><span class="label label-success">{{ $result->TTI }}%</span></td>
                 </tr>
-                </tbody>
                 @endforeach
-                    @else
-                    <center><h4>No results found.</h4></center>
-                    @endif
+                </tbody>
               </table>
             </div>
-            <div class="box-tools">
-                <ul class="pagination pagination-sm no-margin pull-right">
-                
-                    @if ($results->onFirstPage())
-                        <li class="disabled"><span>&laquo;</span></li>
-                    @else
-                        <li><a href="{{ $results->previousPageUrl() }}" rel="prev">&laquo;</a></li>
-                    @endif
-
-                    @foreach ($results->getUrlRange(max(1, $results->currentPage() - 1), min($results->lastPage(), $results->currentPage() + 5)) as $page => $url)
-                        <li class="{{ $results->currentPage() == $page ? 'active' : '' }}">
-                            <a href="{{ $url }}">{{ $page }}</a>
-                        </li>
-                    @endforeach
-
-                    @if ($results->hasMorePages())
-                        <li><a href="{{ $results->nextPageUrl() }}" rel="next">&raquo;</a></li>
-                    @else
-                        <li class="disabled"><span>&raquo;</span></li>
-                    @endif
-                </ul>
-              </div>
             <!-- /.box-body -->
           </div>
           <!-- /.box -->
         </div>
+        <!-- /.col -->
       </div>
+      <!-- /.row -->
     </section>
     <!-- /.content -->
   </div>
@@ -613,7 +571,10 @@
 <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
 <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<!-- Slimscroll -->
+<!-- DataTables -->
+<script src="../../bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="../../bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<!-- SlimScroll -->
 <script src="../../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 <!-- FastClick -->
 <script src="../../bower_components/fastclick/lib/fastclick.js"></script>
@@ -621,12 +582,19 @@
 <script src="../../dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../../dist/js/demo.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
+<!-- page script -->
 <script>
-$(document).ready( function () {
-    $('#myTable').DataTable();
-} );
+  $(function () {
+    $('#example1').DataTable()
+    $('#example2').DataTable({
+      'paging'      : true,
+      'lengthChange': false,
+      'searching'   : false,
+      'ordering'    : true,
+      'info'        : true,
+      'autoWidth'   : false
+    })
+  })
 </script>
 </body>
 </html>

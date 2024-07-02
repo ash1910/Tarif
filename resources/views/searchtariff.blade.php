@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Search Tariff</title>
+  <title>Tariff Search</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -27,10 +28,6 @@
 
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-  
-  <!--Data Table-->
-  <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css" />
-
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
@@ -57,7 +54,6 @@
         <ul class="nav navbar-nav">
           <!-- Messages: style can be found in dropdown.less-->
           <li class="dropdown messages-menu">
-
             <ul class="dropdown-menu">
               <li class="header">You have 4 messages</li>
               <li>
@@ -169,7 +165,6 @@
           </li>
           <!-- Tasks: style can be found in dropdown.less -->
           <li class="dropdown tasks-menu">
-
             <ul class="dropdown-menu">
               <li class="header">You have 9 tasks</li>
               <li>
@@ -240,7 +235,6 @@
           </li>
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
-
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
@@ -286,15 +280,18 @@
   <aside class="main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
-     
+      <!-- Sidebar user panel -->
+      <!-- search form -->
+      <!-- /.search form -->
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
 
+          
         <li class="header">LABELS</li>
-        <!--<li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>-->
-        <!--<li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>-->
+        <!--<li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
+        <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>-->
         <li><a href="/searchtariff"><i class="fa fa-circle-o text-aqua"></i> <span>Tariff Search</span></a></li>
-        <li><a href="/tarifflist"><i class="fa fa-circle-o text-aqua"></i> <span>Tariff List</span></a></li>
+        <li><a href="/tarifflist"><i class="fa fa-circle-o text-aqua"></i> <span>Tariff List</span></a></li>  
       </ul>
     </section>
     <!-- /.sidebar -->
@@ -305,54 +302,53 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Search Tariff
+        Tariff Search
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="/searchtariff">Search Tariff</a></li>
+        <li><a href="/tariffsearch">Tariff Search</a></li>
+        <!--<li class="active">Simple</li>-->
       </ol>
     </section>
 
-    <!-- Main content -->
-    <section class="content" style="padding-left: 100px; padding-right: 100px">
-      <div class="row">
-      <form action="{{ route('searchtariff') }}" method="GET"><thead>
-      <center><div id="myTable" class="input-group input-group-sm" style="width: 500px; padding-left: 14px; padding-right: 14px; padding-bottom: 35px;
-    padding-top: 60px;">
-                  <input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
 
-                  <div class="input-group-btn">
+  <!--search button-->
+  <center>
+  <form action="{{ route('searchtariff') }}" method="GET">
+<div class="box box-primary" style="width: 550px; height: 190px; padding-top: 50px; margin-top:40px">
+
+                    <div class="input-group input-group-sm hidden-xs" style="width: 250px; padding-bottom: 30px;">
+                                <input style="height: 40px;" type="text" name="table_search" class="form-control pull-right" placeholder="Tariff Search">
+                    </div>
+                    <div class="input-group-btn">
                   <button type="submit" class="btn btn-primary">Search</button>
                   </div>
-                </div>
-                <br></head></center>
+  </div>
   </form>
-        <div class="col-md-6">
-
-          <!-- /.box -->
-        </div>
+</center>
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
         <!-- /.col -->
-        <div class="col-xs-12">
+      </div>
+      <!-- /.row -->
+      <div class="row">
+        <div class="col-xs-12" style="padding-right: 70px; padding-left: 70px;">
           <div class="box">
-            <div class="box-header">
-              <h3 class="box-title">Search Tariff</h3>
+            <!--<div class="box-header">
+              <h3 class="box-title">Responsive Hover Table</h3>
 
-             <!-- <div class="box-tools">
-                <ul class="pagination pagination-sm no-margin pull-right">
-                  <li><a href="#">&laquo;</a></li>
-                  <li><a href="#">1</a></li>
-                  <li><a href="#">2</a></li>
-                  <li><a href="#">3</a></li>
-                  <li><a href="#">&raquo;</a></li>
-                </ul>
-              </div>-->
-            </div>
+              <div class="box-tools">
+                <div class="input-group input-group-sm hidden-xs" style="width: 150px;">
+
+                </div>
+              </div>
+            </div>-->
             <!-- /.box-header -->
-            <div class="box-body no-padding">
-              <table  id="myTable" class="table">
-              <thead>
+            <div class="box-body table-responsive no-padding">
+              <table class="table table-hover">
                 <tr>
-                <th>HSCODE</th>
+                  <th>HSCODE</th>
                   <th>DESCRIPTION</th>
                   <th>CD</th>
                   <th>SD</th>
@@ -363,12 +359,10 @@
                   <th>EXD</th>
                   <th>TTI</th>
                 </tr>
-              </thead>
                 @if ($results!==null)
                 @foreach ($results as $result)
-                <tbody>
                 <tr>
-                  <td>{{ $result->HSCODE }}</td>
+                <td>{{ $result->HSCODE }}</td>
                   <td>{{ $result->DESCRIPTION }}</td>
                   <td>{{ $result->CD }}</td>
                   <td>{{ $result->SD}}</td>
@@ -379,7 +373,6 @@
                   <td>{{ $result->EXD }}</td>
                   <td><span class="label label-success">{{ $result->TTI }}%</span></td>
                 </tr>
-                </tbody>
                 @endforeach
                     @elseif ($results)
                     <center><h4>No results found.</h4></center>
@@ -392,15 +385,15 @@
           </div>
           <!-- /.box -->
         </div>
-        <!-- /.col -->
       </div>
-      <!-- /.row -->
     </section>
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
-    <strong>Copyright &copy; 2021-2024 <a href="https://technomole.com">TechnoMole Creations Ltd</a>.</strong> All rights
+    <div class="pull-right hidden-xs">
+    </div>
+    <strong>Copyright &copy; 2014-2019 <a href="https://technomole.com">TechnoMole Creations Ltd</a>.</strong> All rights
     reserved.
   </footer>
 
@@ -612,12 +605,5 @@
 <script src="../../dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../../dist/js/demo.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
-<script>
-$(document).ready( function () {
-    $('#myTable').DataTable();
-} );
- </script>
 </body>
 </html>
