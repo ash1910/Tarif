@@ -34,9 +34,9 @@
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="../../index2.html" class="logo">
+    <a href="/searchtariff" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>A</b>LT</span>
+      <!--<span class="logo-mini"><b>T</b>RF</span>-->
       <!-- logo for regular state and mobile devices -->
       <span class="logo-lg"><b>Tariff </b>Management</span>
     </a>
@@ -310,23 +310,33 @@
       </ol>
     </section>
 
-
-  <!--search button-->
-  <center>
-  <form action="{{ route('searchtariff') }}" method="GET">
-<div class="box box-primary" style="width: 550px; height: 230px; padding-top: 50px; margin-top:40px">
-<div class="box-header">
-              <h4 class="box-title">Search by HS Code or Description</h4>
-  </div>
-                    <div class="input-group input-group-sm hidden-xs" style="width: 250px; padding-bottom: 30px;">
-                             <label >HS Code/Description</label> <input style="height: 40px;" type="text" name="table_search" class="form-control pull-right" placeholder="Tariff Search">
-                    </div>
-                    <div class="input-group-btn">
-                  <button type="submit" class="btn btn-primary">Search</button>
+        <!-- Horizontal Form -->
+        <div class="box box-info" style="width: 600px; margin: 0 auto; margin-top: 40px; margin-bottom: 25px">
+          <div class="box-header with-border">
+              <h3 class="box-title">Search by HS Code or Description</h3>
+          </div>
+          <!-- /.box-header -->
+          <!-- form start -->
+          <form class="form-horizontal" action="{{ route('searchtariff') }}" method="GET">
+              <div class="box-body">
+                  <div class="form-group">
+                      <label for="inputSearch" class="col-sm-3 control-label">HS Code / Description</label>
+                      <div class="col-sm-7" style="padding-top: 10px;">
+                          <input type="text" class="form-control" id="inputSearch" name="table_search" placeholder="Tariff Search" required>
+                      </div>
                   </div>
-  </div>
-  </form>
-</center>
+              </div>
+              <!-- /.box-body -->
+              <div class="box-footer">
+                  <div class="col-sm-offset-4 col-sm-4">
+                      <button type="submit" class="btn btn-info btn-block">Search</button>
+                  </div>
+              </div>
+              <!-- /.box-footer -->
+          </form>
+      </div>
+                <!-- /.box -->
+
     <!-- Main content -->
     <section class="content">
       <div class="row">
@@ -336,20 +346,11 @@
       <div class="row">
         <div class="col-xs-12" style="padding-right: 70px; padding-left: 70px;">
           <div class="box">
-            <!--<div class="box-header">
-              <h3 class="box-title">Responsive Hover Table</h3>
-
-              <div class="box-tools">
-                <div class="input-group input-group-sm hidden-xs" style="width: 150px;">
-
-                </div>
-              </div>
-            </div>-->
-            <!-- /.box-header -->
             <div class="box-body table-responsive no-padding">
               <table class="table table-hover">
+              @if ($results !== null && count($results) > 0)
                 <tr>
-                  <th>HSCODE</th>
+                  <th>HS CODE</th>
                   <th>DESCRIPTION</th>
                   <th>CD</th>
                   <th>SD</th>
@@ -360,7 +361,7 @@
                   <th>EXD</th>
                   <th>TTI</th>
                 </tr>
-                @if ($results!==null)
+                
                 @foreach ($results as $result)
                 <tr>
                 <td>{{ $result->HSCODE }}</td>
@@ -375,12 +376,12 @@
                   <td><span class="label label-success">{{ $result->TTI }}%</span></td>
                 </tr>
                 @endforeach
-                    @elseif ($results)
+                @elseif ($results !== null && count($results) === 0)
                     <center><h4>No results found.</h4></center>
-                    @else
-
-                    @endif
-              </table>
+                @else
+                    <!-- Handle the case where $results is explicitly null -->
+                @endif
+                              </table>
             </div>
             <!-- /.box-body -->
           </div>
